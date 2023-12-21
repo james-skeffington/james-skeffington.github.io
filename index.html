@@ -272,13 +272,30 @@ function w3_close() {
 
 // Open and close the accordions 
 function accordionFunction(id) {
+  var i, panel;
   var x = document.getElementById(id);
+
+  // Get all elements with the class "accordion-panel" and hide them
+  var panels = document.getElementsByClassName("w3-show");
+  for (i = 0; i < panels.length; i++) {
+    panel = panels[i];
+    if (panel.id !== id && panel.className.indexOf("w3-show") > -1) {
+      panel.className = panel.className.replace(" w3-show", "");
+    }
+  }
+
+  // Toggle the clicked panel
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+
+
+
+
 
 </script>
 
