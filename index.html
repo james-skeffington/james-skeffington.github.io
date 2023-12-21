@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./moonlight_painting.jpg");
+  min-height: 50%;
+}
+
+.w3-image {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.w3-card {
+	padding: 4px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Moonlight</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Moonlight</span><br>
+    <span class="w3-large">by Claude-Joseph Vernet</span>
+  </div> 
+</header>
+
+
+<!-- Accordions -->
+	<div class="w3-container" style="padding:16px 16px" id="team">
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align">Location</button>
+			<div id="Demo1" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:8px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./museum_map_gallery_55.jpg" alt="Alt" style="width:100%;" class="w3-image">
+							<h3>Gallery 55</h3>
+							<p>This painting is located in the West Building, near the center of the Main floor, in the section dedicated to 18th- and early-19th Century French Paintings and Sculptures.</p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo2')" class="w3-button w3-block w3-black w3-left-align">Impression</button>
+			<div id="Demo2" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./moonlight_painting.jpg" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Thoughts & Feelings</h3>
+							<p>Take a quick look at the painting. </p>  
+							<p>What's your initial impression? What catches your attention? What stands out to you?</p>  
+							<p>Does this painting elicit any emotions? How does it make you feel?</p>
+							<p>Take a mental note of your initial thoughts and feelings.</p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo3')" class="w3-button w3-block w3-black w3-left-align">Artist</button>
+			<div id="Demo3" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Joseph_Vernet_%281778%29.jpg" alt="Alt" style="width:100%; object-position: 50% 5%;" class="w3-image">
+							<h3>Claude-Joseph Vernet</h3>
+							<p>Claude-Joseph Vernet was an 18th-century French painter who is primarily known for his exquisite marine and landscape paintings, particularly his striking and detailed portrayals of seascapes, storms, and port scenes.</p>
+							<p>Three notable paintings by Claude-Joseph Vernet are "A Storm on a Mediterranean Coast" (1767), "The Shipwreck" (1772), and "View of the Port of Rochefort" (1762).</p>
+							<p>Claude-Joseph Vernet's contemporaries included notable artists such as Jean-Honoré Fragonard (1732-1806), François Boucher (1703-1770), and Maurice Quentin de La Tour (1704-1788).</p>
+							<p>Learn more about the artist <a href="https://en.wikipedia.org/wiki/Claude-Joseph_Vernet" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo4')" class="w3-button w3-block w3-black w3-left-align">Context</button>
+			<div id="Demo4" class="w3-hide w3-container">
+				<div class="w3-row" style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Salon_de_Madame_Geoffrin.jpg" alt="Alt" style="width:100%; object-position: 50% 5%;" class="w3-image">
+							<h3>The Enlightenment</h3>
+							<p>Claude-Joseph Vernet painted "Moonlight" in 1772 while residing in France.</p>
+							<p>The 1770s in France were marked by the late Enlightenment, where intellectual and cultural growth coexisted with increasing economic strain and social inequality, setting the stage for the revolutionary upheaval that followed.</p>
+							<p>At that time, art was characterized by a transition from the ornate Rococo style to the more restrained and classical Neoclassical movement, reflecting the broader intellectual and cultural shifts of the Enlightenment era.</p>
+							<p>Learn more about the time period <a href="https://en.wikipedia.org/wiki/Age_of_Enlightenment" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo5')" class="w3-button w3-block w3-black w3-left-align">Subject</button>
+			<div id="Demo5" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./moonlight_painting.jpg" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Nocturnal Maritime</h3>
+							<!-- ChatGPT prompt: In no more than 350 characters, describe the subject of Claude-Joseph Vernet's painting, "Moonlight." -->
+							<p>"Moonlight" depicts a maritime scene, illuminated by the bright light of a full moon.</p>
+							<p>Ships rest on the calm waters while two groups of sailors pull their small wooden boats ashore.</p>
+							<p>In the foreground, a group of people huddle by the fire: one man smokes his pipe while another tends to the fire; the women each have baskets; a dog barks at the sailors.</p>
+							<p>Get a close-up look at the painting <a href="https://www.nga.gov/collection/art-object-page.214332.html" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo6')" class="w3-button w3-block w3-black w3-left-align">Style</button>
+			<div id="Demo6" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Hodges%2C_Resolution_and_Adventure_in_Matavai_Bay.jpg" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Rococo & Neoclassicism</h3>
+							<!-- ChatGPT prompt: In no more than 350 characters, explain what style Claude-Joseph Vernet's painting, "Moonlight," is painted.  How can you tell? -->
+							<p>Claude-Joseph Vernet's painting 'Moonlight' is characterized by a style that aligns with the transition from Rococo to Neoclassicism, which was common in the later part of the 18th century. His work would typically exhibit the romantic and atmospheric qualities associated with Rococo, alongside a growing emphasis on the realism and subdued color palette that would come to define Neoclassicism. This blend allows for a dramatic yet precise portrayal of nature, particularly in his marine and landscape scenes.</p>
+							<p>Learn more about Rococo <a href="https://www.theartstory.org/movement/rococo/" target="_blank">here (link)</a></p>
+							<p>Learn more about Neoclassicism <a href="https://www.theartstory.org/movement/neoclassicism/" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo8')" class="w3-button w3-block w3-black w3-left-align">Interpretation</button>
+			<div id="Demo8" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./keelmen_heaving_in_coals_by_moonlight.jpg" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Vernet & Turner</h3>
+					<!-- ChatGPT prompt: text -->
+							<p>Vernet wasn't the only artist to depict nocturnal maritime scenes; Joseph Mallord William Turner's "Keelmen Heaving in Coals by Moonlight" (1835) (located nearby, in Gallery 57) provides a nice contrast to Vernet's painting.</p>
+							<p>Turner's piece exemplifies the Romantic era's focus on dynamic, dramatic scenes, emphasizing the interplay of human activity and the sublime power of nature, particularly evident in its vivid portrayal of industrial labor against the backdrop of moonlit waters.</p>
+							<p>In contrast, Vernet's "Moonlight" (1772) reflects the transitional phase between Rococo and Neoclassicism, focusing more on serene, harmonious maritime scenes with meticulous attention to atmospheric detail and a more subdued, orderly depiction of the natural world.</p>
+							<p>Learn more about this painting <a href="https://www.nga.gov/collection/art-object-page.1225.html" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo9')" class="w3-button w3-block w3-black w3-left-align">Emotion</button>
+			<div id="Demo9" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./moonlight_closeup.png" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Relaxation</h3>
+					<!-- ChatGPT prompt: text -->
+							<p>There are at least two aspects to emotion that your should consider: the emotions depicted on the faces of the people in the painting and the overall emotional effect of the painting.</p>
+							<p>To me, the faces of the people in the picture portray relaxation.</p>
+							<p>The soft colors and calm seas reinforce this idea of calm relaxation.</p>
+							<p>What emotions do you sense?</p>
+							<p>Get a close-up look at the painting <a href="https://www.nga.gov/collection/art-object-page.214332.html" target="_blank">here (link)</a></p>
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	<!-- Button Start -->
+		<button onclick="accordionFunction('Demo10')" class="w3-button w3-block w3-black w3-left-align">Reaction</button>
+			<div id="Demo10" class="w3-hide w3-container">
+				<div class="w3-row " style="margin-top:16px">
+					<div class="w3-col l3 m6 w3-margin-bottom">			
+						<div class="w3-card">
+							<img src="./moonlight_painting.jpg" alt="Alt" style="width:100%" class="w3-image">
+							<h3>Your Reaction</h3>
+					<!-- ChatGPT prompt: text -->
+							<p>Now that you know a bit more about this painting, how has your reaction to it changed?</p>
+							<p>Do you feel differently, or the same?</p>
+							<p>What do you think of the painting?</p>
+
+						</div>
+					</div>
+				</div>
+			</div> 
+	<!-- Button End -->
+	</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+// Open and close the accordions 
+function accordionFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
+
+</body>
+</html>
